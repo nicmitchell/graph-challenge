@@ -1,6 +1,17 @@
 <html>
 <head>
-  <script src="dijkstra.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
+  <script src="graph.js"></script>
+  <script src="graphValues.js"></script>
 </head>
+<body ng-app="app">
+  <div ng-controller="main">
+    {{ g.vertices }}
+    <div ng-repeat="node in g.vertices">
+      <node values="{{node}}"></node>
+      Node: {{ node }}
+    </div>
+  </div>
+</body>
 </html>
