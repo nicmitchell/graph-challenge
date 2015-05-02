@@ -1,7 +1,7 @@
 angular.module('app')
   .factory('dijkstra', ['GraphValues', function(GraphValues) {
     /**
-    * Source: https://github.com/mburst/dijkstras-algorithm
+    * Modified from source: https://github.com/mburst/dijkstras-algorithm
     * Basic priority queue implementation. If a better priority queue is wanted/needed,
     * this code works with the implementation in google's closure library (https://code.google.com/p/closure-library/).
     * Use goog.require('goog.structs.PriorityQueue'); and new goog.structs.PriorityQueue()
