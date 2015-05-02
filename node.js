@@ -1,22 +1,20 @@
 angular.module('app')
   .directive('node', function(){
     return {
-      restrict: 'EA',
-      replace: true,
+      restrict: 'E',
+      replace: false,
       scope: {
-        values: '@'
+        node: '@',
+        clicked: "&"
       },
       template: [
-        '<div class="node" ng-model="node">',
-        '{{ node }}',
-        '</div>'
+        '<button class="node" ng-click="clicked({node:node})">',
+          '{{node.name}} - {{node}}',
+        '</button>'
       ].join(''),
       link: function (scope, element, attrs) {
-        console.log('scope', scope);
-        console.log('element', element);
-        console.log('atts', attrs);
-        // var ratio = (attrs.height / attrs.width) * 100;
-        // element[0].style.paddingTop = ratio + '%';
+        console.log('scope', scope.node)
+        
       }
     };
   })
